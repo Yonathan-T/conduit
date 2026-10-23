@@ -1,0 +1,32 @@
+service:
+  name: ProductService
+  package: catalog.v1
+types:
+  - name: Product
+    fields:
+      - name: id
+        type: string
+      - name: name
+        type: string
+      - name: price
+        type: double
+methods:
+  - name: SearchProducts
+    http:
+      method: GET
+      path: /v1/products
+    request:
+      fields:
+        - name: query
+          type: string
+          location: query
+        - name: limit
+          type: int32
+          location: query
+        - name: sort
+          type: string
+          location: query
+    response:
+      fields:
+        - name: products
+          type: Product[]

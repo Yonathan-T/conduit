@@ -1,0 +1,24 @@
+# Binaries & build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+dist/
+
+.vscode/
+public/
+
+# Editor & IDE settings
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+*.out
+*.test
